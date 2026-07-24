@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Espetinho Arena | Espeteria Premium em Barreirinho</title>
+
+  <meta
+    name="description"
+    content="Espetinho da Arena — espeteria artesanal em Barreirinho. Espetinhos na brasa, pastéis, cachorro-quente, cerveja gelada e caldo de cana. Peça pelo WhatsApp."
+  >
+
+  <meta name="theme-color" content="#0b0806">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Espetinho Arena | Espeteria em Barreirinho">
+  <meta property="og:description" content="Espetinhos na brasa, pastéis, bebidas geladas e muito mais. Peça pelo WhatsApp.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Favicon antigo mantido, mas você pode trocar pelo logo também -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b0806'/%3E%3Cpath fill='%23e85f18' d='M15.36 5.21a8.25 8.25 0 01-3.32 15.79A8.25 8.25 0 016.04 7.05 8.29 8.29 0 009 9.6a9 9 0 013.36-6.87 8.2 8.2 0 003 2.48z'/%3E%3C/svg%3E">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Espetinho Arena",
+    "servesCuisine": "Espetos, Grelhados, Lanches",
+    "priceRange": "R$",
+    "telephone": "+5531992685050",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Barreirinho",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday","Friday","Saturday","Sunday"],
+      "opens": "18:00",
+      "closes": "23:00"
+    }],
+    "sameAs": ["https://www.instagram.com/espetinhoarena_barreirinho"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --black: #0b0806;
+      --black-soft: #120d09;
+      --brown: #21140c;
+      --brown-light: #302016;
+      --orange: #e85f18;
+      --orange-dark: #a63f0f;
+      --orange-light: #ff8735;
+      --gold: #d7a343;
+      --gold-light: #f1ca70;
+      --cream: #f6ead7;
+      --muted: #ae9981;
+      --white: #ffffff;
+      --green: #25d366;
+      --line: rgba(215, 163, 67, .2);
+      --shadow-lg: 0 30px 60px -20px rgba(0, 0, 0, .65);
+      --ease: cubic-bezier(.16, 1, .3, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--cream);
+      background: var(--black);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      pointer-events: none;
+      opacity: .035;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    ::selection { color: var(--black); background: var(--gold); }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; border: 0; background: none; cursor: pointer; }
+
+    .container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(var(--gold), var(--orange)); border-radius: 10px; }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-family: "Oswald", sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px; height: 1px;
+      background: linear-gradient(90deg, var(--orange), transparent);
+    }
+
+    .section-title { max-width: 700px; }
+
+    .section-title h2 {
+      margin-top: 13px;
+      color: var(--cream);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -.01em;
+    }
+
+    .section-title h2 span { color: var(--orange-light); font-style: italic; }
+
+    .section-title p { max-width: 600px; margin-top: 18px; color: var(--muted); line-height: 1.8; }
+
+    .icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease);
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .08s; }
+    .reveal-delay-2 { transition-delay: .16s; }
+    .reveal-delay-3 { transition-delay: .24s; }
+    .reveal-delay-4 { transition-delay: .32s; }
+
+    /* Background */
+    .background-glow {
+      position: fixed; z-index: -3;
+      width: 430px; height: 430px;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(120px);
+      opacity: .13;
+    }
+    .background-glow.one { top: -150px; left: -180px; background: var(--orange); }
+    .background-glow.two { top: 55%; right: -200px; background: var(--gold); }
+
+    .particles { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+    .particle {
+      position: absolute; bottom: -20px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px var(--gold);
+      animation: particleUp linear infinite;
+    }
+    @keyframes particleUp {
+      0% { transform: translate3d(0, 0, 0) scale(.8); opacity: 0; }
+      20% { opacity: .9; }
+      100% { transform: translate3d(var(--drift), -110vh, 0) scale(.2); opacity: 0; }
+    }
+
+    /* ════════════════════════════════════════════
+       HEADER
+    ════════════════════════════════════════════ */
+
+    .header {
+      position: fixed; top: 0; right: 0; left: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(215, 163, 67, .14);
+      background: rgba(11, 8, 6, .7);
+      backdrop-filter: blur(18px);
+      transition: background .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    .header.scrolled {
+      background: rgba(11, 8, 6, .94);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .5);
+      border-color: rgba(215, 163, 67, .25);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 30px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 11px; white-space: nowrap; }
+
+    /* Ajuste para o novo logo */
+    .brand-logo {
+      height: 50px; /* Altura fixa para alinhar no header */
+      width: auto;  /* Largura automática para manter proporção */
+      display: block;
+      transition: transform .3s var(--ease);
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    }
+    .brand:hover .brand-logo { 
+      transform: scale(1.05); 
+    }
+
+    /* Mantive o estilo antigo caso queira voltar, mas oculto por padrão se usar a imagem */
+    .brand-mark {
+      width: 40px; height: 40px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--brown), var(--black-soft));
+      border: 1px solid var(--gold);
+      color: var(--gold-light); font-size: 1.1rem;
+      box-shadow: 0 0 0 4px rgba(215, 163, 67, .06), 0 6px 16px rgba(0,0,0,.5);
+      transition: transform .3s var(--ease);
+    }
+    .brand:hover .brand-mark { transform: rotate(-12deg) scale(1.06); }
+
+    .brand-text strong {
+      display: block; color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: 1.25rem; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase;
+    }
+    .brand-text small {
+      display: block; margin-top: 1px; color: var(--gold);
+      font-family: "Oswald", sans-serif;
+      font-size: .57rem; letter-spacing: .26em; text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 28px;
+      color: var(--muted);
+      font-family: "Oswald", sans-serif;
+      font-size: .76rem; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .nav-links a { position: relative; padding-bottom: 4px; transition: color .2s ease; }
+    .nav-links a::after {
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 1px; background: var(--gold);
+      transition: width .3s var(--ease);
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .header-button {
+      position: relative; overflow: hidden;
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 43px; padding: 0 17px;
+      border: 1px solid var(--orange);
+      color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+      transition: .25s ease;
+    }
+    .header-button:hover {
+      color: var(--black); background: var(--orange);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -8px rgba(232, 95, 24, .6);
+    }
+
+    /* ════════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
+
+    .button {
+      position: relative; overflow: hidden;
+      min-height: 52px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 0 25px;
+      border: 1px solid transparent;
+      font-family: "Oswald", sans-serif;
+      font-size: .76rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s ease, color .3s ease;
+    }
+    .button::before {
+      content: ""; position: absolute; top: 0; left: -60%;
+      width: 40%; height: 100%;
+      background: linear-gradient(115deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: skewX(-20deg);
+      transition: left .6s ease;
+    }
+    .button:hover::before { left: 130%; }
+
+    .button-primary {
+      color: var(--black);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      box-shadow: 0 12px 30px -10px rgba(215, 163, 67, .55);
+    }
+    .button-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px -10px rgba(215, 163, 67, .75);
+    }
+
+    .button-outline {
+      border-color: var(--line); color: var(--cream);
+      background: rgba(255,255,255,.02);
+    }
+    .button-outline:hover {
+      border-color: var(--gold); color: var(--gold-light);
+      transform: translateY(-3px);
+      background: rgba(215, 163, 67, .06);
+    }
+
+    /* ════════════════════════════════════════════
+       HERO — redesenhado
+    ═══════════════════════════════════════════ */
+
+    .hero {
+      position: relative; z-index: 1;
+      min-height: 100svh;
+      display: grid; align-items: center;
+      padding: 145px 0 90px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(11,8,6,.98) 0%, rgba(11,8,6,.8) 43%, rgba(11,8,6,.35) 100%),
+        radial-gradient(circle at 75% 50%, rgba(232, 95, 24, .2), transparent 42%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center; gap: 60px;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-bottom: 20px;
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(215, 163, 67, .06);
+      color: var(--gold-light);
+      font-family: "Oswald", sans-serif;
+      font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%; background: var(--orange-light);
+      box-shadow: 0 0 0 3px rgba(232,95,24,.25);
+      animation: pulseDot 1.8s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: .6; }
+    }
+
+    .hero-content h1 {
+      max-width: 700px; margin-top: 18px;
+      color: var(--cream);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.4rem, 7vw, 7.6rem);
+      font-weight: 800; line-height: .94; letter-spacing: -.04em;
+    }
+    .hero-content h1 em { color: var(--orange-light); font-style: italic; }
+
+    .hero-content > p {
+      max-width: 510px; margin-top: 26px;
+      color: var(--muted); font-size: 1.04rem; line-height: 1.8;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 22px;
+      margin-top: 42px; padding-top: 26px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: "Oswald", sans-serif;
+      font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 8px; }
+    .hero-meta .icon { color: var(--gold); font-size: 1rem; }
+    .hero-meta strong { color: var(--gold-light); }
+
+    /* ══ HERO VISUAL — novo design: Chama SVG + Stats ═══ */
+
+    .hero-showcase {
+      position: relative;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 520px;
+    }
+
+    /* Anel decorativo */
+    .showcase-ring {
+      position: absolute;
+      width: 380px; height: 380px;
+      border: 1px solid rgba(215, 163, 67, .18);
+      border-radius: 50%;
+      animation: rotateRing 40s linear infinite;
+    }
+    .showcase-ring::after {
+      content: "";
+      position: absolute; top: -4px; left: 50%;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--gold-light);
+      box-shadow: 0 0 12px var(--gold);
+    }
+    @keyframes rotateRing { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    .showcase-ring-2 {
+      position: absolute;
+      width: 300px; height: 300px;
+      border: 1px dashed rgba(215, 163, 67, .1);
+      border-radius: 50%;
+      animation: rotateRing 60s linear infinite reverse;
+    }
+
+    /* Chama central em SVG */
+    .flame-container {
+      position: relative; z-index: 2;
+      width: 200px; height: 240px;
+      filter: drop-shadow(0 0 40px rgba(232, 95, 24, .5)) drop-shadow(0 0 80px rgba(232, 95, 24, .2));
+    }
+
+    .flame-svg { width: 100%; height: 100%; }
+
+    .flame-outer { fill: var(--orange); animation: flamePulse 2.5s ease-in-out infinite; transform-origin: bottom center; }
+    .flame-mid { fill: var(--orange-light); animation: flamePulse 2s ease-in-out infinite .3s; transform-origin: bottom center; }
+    .flame-inner { fill: var(--gold-light); animation: flamePulse 1.8s ease-in-out infinite .6s; transform-origin: bottom center; }
+    .flame-core { fill: var(--cream); animation: flamePulse 1.5s ease-in-out infinite .2s; transform-origin: bottom center; }
+
+    @keyframes flamePulse {
+      0%, 100% { transform: scaleY(1) scaleX(1); }
+      25% { transform: scaleY(1.06) scaleX(.96); }
+      50% { transform: scaleY(.94) scaleX(1.04); }
+      75% { transform: scaleY(1.03) scaleX(.97); }
+    }
+
+    /* Mini partículas de fogo */
+    .fire-particles {
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 200px; height: 260px;
+      pointer-events: none; z-index: 1;
+    }
+    .fire-particle {
+      position: absolute; bottom: 60px;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--gold-light);
+      opacity: 0;
+      animation: fireFloat linear infinite;
+    }
+    @keyframes fireFloat {
+      0% { transform: translate(0, 0) scale(1); opacity: 0; }
+      15% { opacity: 1; }
+      100% { transform: translate(var(--fx), -200px) scale(0); opacity: 0; }
+    }
+
+    /* Texto central */
+    .showcase-label {
+      margin-top: 26px; z-index: 3;
+      color: var(--gold-light);
+      font-family: "Oswald", sans-serif;
+      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* Stats cards */
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+      margin-top: 34px; z-index: 3;
+      width: 100%; max-width: 420px;
+    }
+    .stat-card {
+      padding: 18px 14px;
+      border: 1px solid var(--line);
+      background: rgba(33, 20, 12, .75);
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: transform .3s var(--ease), border-color .3s ease;
+    }
+    .stat-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+
+    .stat-number {
+      display: block;
+      color: var(--gold-light);
+      font-family: "Playfair Display", serif;
+      font-size: 2rem; font-weight: 700; line-height: 1;
+    }
+    .stat-number .plus { font-size: 1.3rem; color: var(--orange-light); }
+
+    .stat-label {
+      display: block; margin-top: 6px;
+      color: var(--muted);
+      font-family: "Oswald", sans-serif;
+      font-size: .62rem; letter-spacing: .12em; text-transform: uppercase;
+    }
+
+    /* ════════════════════════════════════════════
+       BOTÃO DE STATUS DO FOGO (AJUSTADO PARA A PONTA)
+    ════════════════════════════════════════════ */
+    
+    .status-fire-btn {
+      position: absolute;
+      top: 0; /* Alinha com o topo do container da chama */
+      left: 50%;
+      /* Ajuste fino: centraliza horizontalmente e sobe um pouco para ficar acima da ponta */
+      transform: translate(-50%, -80%); 
+      z-index: 10;
+      padding: 8px 18px;
+      border-radius: 50px; /* Arredondado estilo pílula */
+      font-family: "Oswald", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: default;
+      pointer-events: none;
+      
+      /* Estilo base escuro e elegante */
+      background: rgba(11, 8, 6, 0.85); 
+      color: var(--cream);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Estado Aberto - Visual "LIGADO" */
+    .status-fire-btn.is-open {
+      background: linear-gradient(135deg, #25d366, #128c7e); /* Verde Vibrante */
+      color: #fff;
+      border-color: #fff;
+      /* Brilho intenso verde para parecer ligado */
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3);
+      transform: translate(-50%, -90%) scale(1.1);
+      /* Animação de pulso suave */
+      animation: btnPulse 2s infinite;
+    }
+
+    @keyframes btnPulse {
+      0% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.9), 0 0 60px rgba(37, 211, 102, 0.5); }
+      100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3); }
+    }
+
+    /* Estado Fechado */
+    .status-fire-btn.is-closed {
+      background: linear-gradient(135deg, #1a1a1a, #000); /* Preto/Cinza */
+      color: #ae9981; /* Cor Muted */
+      border-color: rgba(255,255,255,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      animation: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       HIGHLIGHTS
+    ════════════════════════════════════════════ */
+
+    .highlights {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(33, 20, 12, .78);
+    }
+    .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+
+    .highlight {
+      display: flex; align-items: center; gap: 17px;
+      padding: 28px 26px;
+      border-right: 1px solid var(--line);
+      transition: background .3s ease;
+    }
+    .highlight:hover { background: rgba(232, 95, 24, .05); }
+    .highlight:last-child { border-right: 0; }
+
+    .icon-badge {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--brown-light), var(--brown));
+      border: 1px solid var(--line);
+      color: var(--gold-light); font-size: 1.4rem;
+    }
+
+    .highlight strong {
+      display: block; color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: .95rem; font-weight: 500;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    .highlight span { display: block; margin-top: 4px; color: var(--muted); font-size: .77rem; }
+
+    /* ════════════════════════════════════════════
+       ABOUT
+    ════════════════════════════════════════════ */
+
+    .about { position: relative; z-index: 1; padding: 130px 0; }
+
+    .about-grid {
+      display: grid; grid-template-columns: .82fr 1.18fr;
+      align-items: center; gap: 90px;
+    }
+
+    .about-panel {
+      position: relative; min-height: 390px;
+      padding: 35px; overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, rgba(232, 95, 24, .2), transparent 60%), var(--brown);
+    }
+    .about-panel::after {
+      content: "BRASA"; position: absolute; right: -25px; bottom: -30px;
+      color: rgba(215, 163, 67, .08);
+      font-family: "Oswald", sans-serif;
+      font-size: 9rem; font-weight: 700; line-height: 1;
+    }
+    .about-panel h3 {
+      position: relative; z-index: 1;
+      color: var(--gold-light);
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem; line-height: 1.05;
+    }
+    .about-panel p {
+      position: relative; z-index: 1;
+      max-width: 290px; margin-top: 26px;
+      color: var(--muted); line-height: 1.8;
+    }
+
+    .about-content p { margin-top: 22px; color: var(--muted); line-height: 1.85; }
+
+    .about-points {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 16px; margin-top: 30px;
+    }
+    .about-point {
+      padding: 18px; border-left: 2px solid var(--orange);
+      background: var(--brown);
+      transition: transform .3s var(--ease), border-color .3s ease;
+    }
+    .about-point:hover { transform: translateX(4px); border-color: var(--gold-light); }
+    .about-point strong {
+      display: block; color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: .9rem; font-weight: 500;
+      letter-spacing: .05em; text-transform: uppercase;
+    }
+    .about-point span { display: block; margin-top: 7px; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+
+    /* ════════════════════════════════════════════
+       STEPS
+    ═══════════════════════════════════════════ */
+
+    .steps {
+      position: relative; z-index: 1;
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(18, 13, 9, .5);
+    }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
+
+    .step {
+      position: relative;
+      padding: 32px 26px;
+      border: 1px solid var(--line);
+      background: rgba(33, 20, 12, .6);
+      transition: transform .3s var(--ease), border-color .3s ease;
+    }
+    .step:hover { transform: translateY(-6px); border-color: var(--gold); }
+
+    .step-number {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; margin-bottom: 18px;
+      border: 1px solid var(--gold); border-radius: 50%;
+      color: var(--gold-light);
+      font-family: "Playfair Display", serif; font-size: 1.1rem;
+    }
+    .step h3 {
+      color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: 1rem; letter-spacing: .05em; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .step p { color: var(--muted); font-size: .85rem; line-height: 1.7; }
+
+    /* ════════════════════════════════════════════
+       MENU
+    ═══════════════════════════════════════════ */
+
+    .menu-section {
+      position: relative; z-index: 1;
+      padding: 120px 0 135px;
+      background: linear-gradient(180deg, transparent, rgba(33, 20, 12, .7), transparent);
+    }
+    .menu-header {
+      display: flex; align-items: end; justify-content: space-between;
+      gap: 30px; margin-bottom: 48px;
+    }
+    .menu-note {
+      max-width: 275px; color: var(--muted);
+      font-family: "Oswald", sans-serif;
+      font-size: .72rem; letter-spacing: .08em; line-height: 1.7;
+      text-align: right; text-transform: uppercase;
+    }
+
+    .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+
+    .menu-card {
+      position: relative; padding: 28px;
+      border: 1px solid var(--line);
+      background: rgba(33, 20, 12, .82);
+      transition: transform .3s var(--ease), border-color .3s ease, box-shadow .3s ease;
+    }
+    .menu-card::before {
+      content: ""; position: absolute; top: -1px; left: -1px; right: -1px;
+      height: 2px; background: linear-gradient(90deg, var(--orange), var(--gold-light));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .4s var(--ease);
+    }
+    .menu-card:hover {
+      border-color: rgba(232, 95, 24, .5);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .menu-card:hover::before { transform: scaleX(1); }
+
+    .menu-card-wide { grid-column: 1 / -1; }
+    .menu-card-featured { background: linear-gradient(135deg, rgba(232, 95, 24, .1), rgba(33, 20, 12, .9)); }
+
+    .card-ribbon {
+      position: absolute; top: 16px; right: -1px;
+      padding: 5px 14px 5px 12px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: .62rem; letter-spacing: .12em; text-transform: uppercase;
+      box-shadow: -4px 4px 12px rgba(0,0,0,.35);
+    }
+
+    .menu-card-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 15px; flex-wrap: wrap;
+      margin-bottom: 20px; padding-bottom: 15px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .menu-card-header h3 { color: var(--gold-light); font-family: "Playfair Display", serif; font-size: 1.65rem; }
+
+    .price {
+      padding: 8px 13px; border-radius: 3px;
+      color: var(--cream);
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      font-family: "Oswald", sans-serif; font-size: .9rem; font-weight: 500;
+      letter-spacing: .04em; white-space: nowrap;
+      box-shadow: 0 8px 18px -8px rgba(232, 95, 24, .55);
+    }
+    .price small { font-size: .68rem; font-weight: 400; opacity: .85; }
+
+    .menu-list { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+    .menu-list.grid { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px; }
+
+    .menu-list li {
+      display: flex; align-items: center; gap: 9px;
+      color: var(--cream); font-size: .91rem;
+      transition: transform .2s ease, color .2s ease;
+    }
+    .menu-list li:hover { transform: translateX(3px); color: var(--gold-light); }
+    .menu-list li::before {
+      content: ""; width: 5px; height: 5px;
+      border-radius: 50%; background: var(--orange-light); flex-shrink: 0;
+    }
+
+    .item-price {
+      margin-left: auto; color: var(--gold-light);
+      font-family: "Oswald", sans-serif; font-size: .88rem; white-space: nowrap;
+    }
+
+    .size-row {
+      display: flex; justify-content: space-between;
+      padding: 12px 0; border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-family: "Oswald", sans-serif; font-size: .9rem; letter-spacing: .05em;
+    }
+    .size-row:last-child { border-bottom: 0; }
+    .size-row strong { color: var(--gold-light); font-weight: 500; }
+
+    /* ═══════════════════════════════════════════
+       LOCATION
+    ════════════════════════════════════════════ */
+
+    .location {
+      position: relative; z-index: 1;
+      padding: 110px 0;
+      border-top: 1px solid var(--line);
+    }
+    .location-grid {
+      display: grid; grid-template-columns: .85fr 1.15fr;
+      gap: 50px; align-items: center; margin-top: 40px;
+    }
+    .location-info { display: flex; flex-direction: column; gap: 22px; }
+
+    .location-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(33, 20, 12, .6);
+    }
+    .location-item .icon-badge { width: 44px; height: 44px; font-size: 1.15rem; }
+    .location-item strong {
+      display: block; color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      font-size: .88rem; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .location-item span { display: block; margin-top: 5px; color: var(--muted); font-size: .85rem; line-height: 1.6; }
+
+    .map-wrap {
+      position: relative; min-height: 340px;
+      border: 1px solid var(--line); overflow: hidden;
+      filter: grayscale(.4) contrast(1.1);
+      box-shadow: var(--shadow-lg);
+    }
+    .map-wrap iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+    /* ════════════════════════════════════════════
+       CONTACT
+    ════════════════════════════════════════════ */
+
+    .contact { position: relative; z-index: 1; padding: 125px 0; text-align: center; }
+    .contact .section-title { margin: 0 auto; }
+    .contact .section-title p { margin-right: auto; margin-left: auto; }
+
+    .contact-actions {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 14px; margin-top: 32px;
+    }
+
+    .opening {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-top: 34px; padding: 10px 20px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-family: "Oswald", sans-serif;
+      font-size: .8rem; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .opening strong { color: var(--gold-light); }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════ */
+
+    .footer {
+      position: relative; z-index: 1;
+      padding: 46px 0 40px;
+      border-top: 1px solid var(--line);
+      background: rgba(18, 13, 9, .6);
+    }
+    .footer-grid {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer strong {
+      display: block; margin-bottom: 6px;
+      color: var(--orange-light);
+      font-family: "Oswald", sans-serif;
+      font-size: 1rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase;
+    }
+    .footer p {
+      color: var(--muted);
+      font-family: "Oswald", sans-serif;
+      font-size: .75rem; letter-spacing: .08em;
+    }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 38px; height: 38px;
+      display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 50%;
+      color: var(--gold-light); transition: .25s ease;
+    }
+    .footer-social a:hover {
+      border-color: var(--gold); background: var(--gold);
+      color: var(--black); transform: translateY(-3px);
+    }
+
+    /* ════════════════════════════════════════════
+       FLOATING ELEMENTS
+    ════════════════════════════════════════════ */
+
+    .floating-whatsapp {
+      position: fixed; right: 22px; bottom: 22px; z-index: 40;
+      width: 60px; height: 60px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      color: var(--white); background: var(--green);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .6);
+      transition: .25s ease;
+    }
+    .floating-whatsapp::before {
+      content: ""; position: absolute; inset: 0;
+      border-radius: 50%; background: var(--green);
+      animation: whatsappPulse 2.2s ease-out infinite;
+      z-index: -1;
+    }
+    @keyframes whatsappPulse {
+      0% { transform: scale(1); opacity: .55; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+    .floating-whatsapp:hover { transform: scale(1.1); }
+
+    .back-to-top {
+      position: fixed; right: 22px; bottom: 92px; z-index: 40;
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 50%;
+      background: rgba(11, 8, 6, .85);
+      color: var(--gold-light);
+      opacity: 0; visibility: hidden;
+      transform: translateY(10px);
+      transition: .3s ease;
+    }
+    .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { border-color: var(--gold); background: var(--gold); color: var(--black); }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════ */
+
+    @media (max-width: 950px) {
+      .nav-links { display: none; }
+      .hero-grid, .about-grid, .location-grid { grid-template-columns: 1fr; }
+
+      .hero-content { text-align: center; }
+      .hero-content .eyebrow, .hero-badge { justify-content: center; margin-left: auto; margin-right: auto; }
+      .hero-content h1, .hero-content > p { margin-right: auto; margin-left: auto; }
+      .hero-actions, .hero-meta { justify-content: center; }
+
+      .hero-showcase { min-height: 480px; }
+
+      .about-grid { gap: 45px; }
+      .about-content { text-align: center; }
+      .about-content .eyebrow { justify-content: center; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .menu-header { align-items: flex-start; flex-direction: column; }
+      .menu-note { max-width: 500px; text-align: left; }
+      .location-grid { gap: 30px; }
+    }
+
+    @media (max-width: 650px) {
+      .container { width: min(100% - 28px, 1180px); }
+      .navbar { min-height: 68px; }
+      .brand-text strong { font-size: 1rem; }
+      .brand-text small { font-size: .48rem; }
+      .header-button { display: none; }
+
+      .hero { padding-top: 112px; }
+      .hero-content h1 { font-size: clamp(3.4rem, 16vw, 5.5rem); }
+      .hero-content > p { font-size: .94rem; }
+
+      .hero-showcase { min-height: 420px; }
+      .showcase-ring { width: 280px; height: 280px; }
+      .showcase-ring-2 { width: 220px; height: 220px; }
+      .flame-container { width: 140px; height: 180px; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .stat-number { font-size: 1.5rem; }
+      .stat-label { font-size: .55rem; }
+
+      .highlights-grid { grid-template-columns: 1fr; }
+      .highlight { border-right: 0; border-bottom: 1px solid var(--line); }
+      .highlight:last-child { border-bottom: 0; }
+
+      .about, .menu-section, .contact, .steps, .location { padding: 82px 0; }
+      .about-panel { min-height: 290px; }
+      .about-points { grid-template-columns: 1fr; }
+
+      .menu-grid { grid-template-columns: 1fr; }
+      .menu-card-wide { grid-column: auto; }
+      .menu-list.grid { grid-template-columns: 1fr; }
+
+      .footer-grid { flex-direction: column; text-align: center; }
+
+      .button { width: 100%; }
+      .hero-actions .button { width: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background-glow one"></div>
+  <div class="background-glow two"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+
+  <header class="header" id="siteHeader">
+    <nav class="navbar container">
+
+      <a class="brand" href="#inicio">
+        <!-- NOVO LOGO AQUI -->
+<img src="https://i.ibb.co/1YGd9dMg/logo-png.jpg" alt="Espetinho Arena Logo" class="brand-logo">
+        
+        <!-- Texto opcional ao lado do logo (pode remover se quiser só a imagem) -->
+        <span class="brand-text">
+          <strong>Espetinho da Arena</strong>
+          <small>Espeteria & Brasa</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#sobre">A casa</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <a class="header-button" href="https://wa.me/5531992685050" target="_blank" rel="noopener noreferrer">
+        Fazer pedido
+      </a>
+
+    </nav>
+  </header>
+
+  <!-- ═══════════════ MAIN ═══════════════ -->
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid container">
+
+        <div class="hero-content">
+
+          <span class="hero-badge">
+            <span class="dot"></span>
+            Aberto de quinta a domingo
+          </span>
+
+          <div class="eyebrow">Barreirinho · Desde a brasa</div>
+
+          <h1>Uma boa brasa <em>reúne pessoas.</em></h1>
+
+          <p>
+            Espetinhos suculentos, acompanhamentos deliciosos e aquele
+            ambiente perfeito para dividir bons momentos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cardapio">Ver cardápio</a>
+            <a class="button button-outline" href="https://wa.me/5531992685050" target="_blank" rel="noopener noreferrer">
+              Pedir pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
+              <strong>Qui a Dom</strong> · 18h às 23h
+            </span>
+            <span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              <strong>Barreirinho</strong> · MG
+            </span>
+          </div>
+
+        </div>
+
+        <!-- ★ NOVO: chama animada + estatísticas ★ -->
+        <div class="hero-showcase">
+
+          <div class="showcase-ring"></div>
+          <div class="showcase-ring-2"></div>
+
+          <div class="fire-particles" id="fireParticles"></div>
+
+          <div class="flame-container">
+            <!-- SVG da Chama -->
+            <svg class="flame-svg" viewBox="0 0 120 150" fill="none">
+              <!-- Outer flame -->
+              <path class="flame-outer" d="M60 5 C30 50, 5 85, 10 115 C15 140, 40 150, 60 150 C80 150, 105 140, 110 115 C115 85, 90 50, 60 5Z"/>
+              <!-- Mid flame -->
+              <path class="flame-mid" d="M60 30 C40 60, 22 90, 25 115 C28 135, 45 145, 60 145 C75 145, 92 135, 95 115 C98 90, 80 60, 60 30Z"/>
+              <!-- Inner flame -->
+              <path class="flame-inner" d="M60 55 C48 75, 35 95, 38 118 C40 132, 50 140, 60 140 C70 140, 80 132, 82 118 C85 95, 72 75, 60 55Z"/>
+              <!-- Core glow -->
+              <path class="flame-core" d="M60 85 C54 95, 46 108, 48 122 C49 130, 54 136, 60 136 C66 136, 71 130, 72 122 C74 108, 66 95, 60 85Z"/>
+            </svg>
+            
+            <!-- BOTÃO DE STATUS SOBRE A PONTA DO FOGO -->
+            <div id="status-fire-btn" class="status-fire-btn">
+              Carregando...
+            </div>
+
+          </div>
+
+          <div class="showcase-label">
+            O sabor nasce do fogo
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="12">0</span>
+              <span class="stat-label">Tipos de espeto</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="6">0</span>
+              <span class="stat-label">Dias por semana</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number"><span data-target="5" class="counter-inline">0</span><span class="plus">h</span></span>
+              <span class="stat-label">De brasa por noite</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights reveal">
+      <div class="highlights-grid container">
+
+        <div class="highlight">
+          <div class="icon-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+            </svg>
+          </div>
+          <div>
+            <strong>Direto da brasa</strong>
+            <span>Preparado na hora</span>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <div class="icon-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <line x1="3" y1="21" x2="21" y2="3" stroke-linecap="round"/>
+              <circle cx="8" cy="16" r="2.6"/>
+              <circle cx="13" cy="11" r="2.6"/>
+              <circle cx="18" cy="6" r="2.2"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Carne bem feita</strong>
+            <span>Textura, sabor e suculência</span>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <div class="icon-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h11v10a2 2 0 01-2 2H7a2 2 0 01-2-2V8z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 10h2a2 2 0 012 2v2a2 2 0 01-2 2h-2"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8V6a1 1 0 011-1h9a1 1 0 011 1v2"/>
+              <line x1="8" y1="11" x2="8" y2="17" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Clima de espeteria</strong>
+            <span>Para comer, beber e conversar</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobre">
+      <div class="about-grid container">
+
+        <div class="about-panel reveal">
+          <h3>Da nossa<br>brasa para<br>sua mesa.</h3>
+          <p>
+            Uma espeteria feita para quem valoriza comida gostosa,
+            atendimento próximo e momentos simples que ficam na memória.
+          </p>
+        </div>
+
+        <div class="about-content reveal reveal-delay-1">
+          <div class="section-title">
+            <div class="eyebrow">A casa</div>
+            <h2>O sabor começa <span>no fogo.</span></h2>
+            <p>
+              No Espetinho Arena, cada pedido é preparado com atenção,
+              respeitando o tempo da brasa e o sabor de cada ingrediente.
+              É comida simples, bem feita e servida com personalidade.
+            </p>
+          </div>
+
+          <div class="about-points">
+            <div class="about-point">
+              <strong>Brasa de verdade</strong>
+              <span>O sabor defumado que só a grelha pode entregar.</span>
+            </div>
+            <div class="about-point">
+              <strong>Variedade no cardápio</strong>
+              <span>Espetinhos, lanches, bebidas e acompanhamentos.</span>
+            </div>
+            <div class="about-point">
+              <strong>Pedido fácil</strong>
+              <span>Faça seu pedido rapidamente pelo WhatsApp.</span>
+            </div>
+            <div class="about-point">
+              <strong>Para compartilhar</strong>
+              <span>Uma experiência gostosa para toda a família.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="steps">
+      <div class="container">
+        <div class="section-title reveal" style="margin:0 auto; text-align:center;">
+          <div class="eyebrow" style="justify-content:center;">Simples assim</div>
+          <h2>Como fazer <span>seu pedido.</span></h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step reveal reveal-delay-1">
+            <div class="step-number">01</div>
+            <h3>Escolha no cardápio</h3>
+            <p>Navegue pelas opções de espetinhos, lanches e bebidas geladas.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-number">02</div>
+            <h3>Chame no WhatsApp</h3>
+            <p>Envie sua lista de pedidos direto pelo botão de atendimento.</p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-number">03</div>
+            <h3>Aproveite na brasa</h3>
+            <p>Retire ou saboreie no local, do jeitinho que só a Arena faz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section" id="cardapio">
+      <div class="container">
+
+        <div class="menu-header reveal">
+          <div class="section-title">
+            <div class="eyebrow">Escolha seu favorito</div>
+            <h2>Cardápio da <span>casa.</span></h2>
+            <p>Do espetinho tradicional ao caldo de cana gelado, tudo para deixar sua noite mais saborosa.</p>
+          </div>
+          <div class="menu-note">
+            Preços sujeitos a alteração.<br>
+            Consulte a disponibilidade dos produtos.
+          </div>
+        </div>
+
+        <div class="menu-grid">
+
+                <article class="menu-card menu-card-wide menu-card-featured reveal">
+  <          <article class="menu-card menu-card-wide menu-card-featured reveal">
+            <div class="card-ribbon">Mais pedido</div>
+            <div class="menu-card-header">
+              <h3>Espetinhos</h3>
+              <div class="price">R$ 11<small>,00 / unidade</small></div>
+            </div>
+            <ul class="menu-list grid">
+              <li>Boi</li><li>Medalhão</li><li>Porco</li><li>Almôndega</li>
+              <li>Coração</li><li>Tulipa</li>
+              <li>Romeu e Julieta <span class="item-price">R$ 14,00</span></li>
+              <li>Brochete</li>
+              <li>Queijo Coalho <span class="item-price">R$ 15,00</span></li>
+              <li>Linguiça aperitiva</li><li>Linguiça caseira</li><li>Misto</li>
+            </ul>
+          </article>
+</article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-header">
+              <h3>Cachorro-quente</h3>
+              <div class="price">R$ 10<small>,00</small></div>
+            </div>
+            <ul class="menu-list">
+              <li>Pão</li><li>Salsicha</li><li>Mussarela</li><li>Bacon</li><li>Milho</li><li>Batata palha</li>
+            </ul>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-header">
+              <h3>Cervejas</h3>
+              <span class="item-price">Latão 473ml</span>
+            </div>
+            <ul class="menu-list">
+              <li>Brahma <span class="item-price">R$ 8,00</span></li>
+              <li>Original <span class="item-price">R$ 8,00</span></li>
+              <li>Heineken <span class="item-price">R$ 9,00</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-header">
+              <h3>Refrigerantes e água</h3>
+            </div>
+            <ul class="menu-list">
+              <li>Coca-Cola lata 350ml <span class="item-price">R$ 5,50</span></li>
+              <li>Sprite lata 350ml <span class="item-price">R$ 5,50</span></li>
+              <li>Coca-Cola 200ml <span class="item-price">R$ 3,00</span></li>
+              <li>Guaraná 200ml <span class="item-price">R$ 3,00</span></li>
+              <li>Pepsi 200ml <span class="item-price">R$ 3,00</span></li>
+              <li>Sukita 200ml <span class="item-price">R$ 3,00</span></li>
+              <li>Água <span class="item-price">R$ 3,00</span></li>
+              <li>Água com gás <span class="item-price">R$ 3,00</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-header">
+              <h3>Caldo de cana</h3>
+            </div>
+            <div class="size-row"><span>300ml</span><strong>R$ 6,00</strong></div>
+            <div class="size-row"><span>500ml</span><strong>R$ 8,00</strong></div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-header">
+              <h3>Doces e fumo</h3>
+            </div>
+            <ul class="menu-list">
+              <li>Doce de amendoim <span class="item-price">R$ 3,00</span></li>
+              <li>Pirolito <span class="item-price">R$ 2,00</span></li>
+              <li>Cigarro Samarino picado <span class="item-price">R$ 1,00</span></li>
+              <li>Cigarro Palha Malta picado <span class="item-price">R$ 1,00</span></li>
+            </ul>
+          </article>
+
+          <article class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-header">
+              <h3>Cachaça</h3>
+            </div>
+            <ul class="menu-list">
+              <li>Dose <span class="item-price">R$ 4,00</span></li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location" id="localizacao">
+      <div class="container">
+        <div class="section-title reveal">
+          <div class="eyebrow">Onde estamos</div>
+          <h2>Venha nos <span>visitar.</span></h2>
+          <p>Fica fácil de chegar — e ainda mais fácil de voltar sempre que a fome de brasa apertar.</p>
+        </div>
+
+        <div class="location-grid">
+
+          <div class="location-info reveal reveal-delay-1">
+            <div class="location-item">
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2.4"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Endereço</strong>
+                <span>Barreirinho, Minas Gerais</span>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path stroke-linecap="round" d="M12 7v5l3 2"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Funcionamento</strong>
+                <span>Quinta a domingo, das 18h às 23h.</span>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="icon-badge">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4H8l2 5-2.5 1.5a12 12 0 006 6L15 14l5 2v3.5c0 .8-.7 1.5-1.5 1.5C10.5 21 3 13.5 3 5.5z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Contato</strong>
+                <span>(31) 99268-5050 — WhatsApp e ligações.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-wrap reveal reveal-delay-2">
+            <iframe src="https://www.google.com/maps?q=Barreirinho,MG&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização do Espetinho Arena"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="section-title reveal">
+          <div class="eyebrow">Faça seu pedido</div>
+          <h2>Hoje combina com <span>espeto.</span></h2>
+          <p>Chame a Arena pelo WhatsApp e peça seus favoritos direto da brasa. Atendimento de quinta a domingo, das 18h às 23h.</p>
+        </div>
+
+        <div class="contact-actions reveal reveal-delay-1">
+          <a class="button button-primary" href="https://wa.me/5531992685050" target="_blank" rel="noopener noreferrer">
+            WhatsApp · 31 99268-5050
+          </a>
+          <a class="button button-outline" href="https://www.instagram.com/espetinhoarena_barreirinho" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <p class="opening reveal reveal-delay-2">
+          <strong>Funcionamento:</strong>
+          Quinta a domingo · 18h às 23h
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Sabor que reúne, momentos que ficam.</strong>
+        <p>© Espetinho Arena — Barreirinho, MG</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/5531992685050" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg class="icon" viewBox="0 0 32 32" fill="currentColor" style="font-size:1.1rem">
+            <path d="M16.004 3C9.377 3 4 8.377 4 15.004c0 2.65.86 5.1 2.317 7.086L4.8 28.2l6.3-1.653a11.94 11.94 0 004.904 1.05h.005c6.627 0 12.004-5.377 12.004-12.004S22.631 3 16.004 3zm0 21.723a9.7 9.7 0 01-4.945-1.354l-.355-.21-3.74.98.999-3.646-.23-.374a9.693 9.693 0 01-1.487-5.115c0-5.362 4.363-9.725 9.758-9.725 5.362 0 9.725 4.363 9.725 9.725 0 5.395-4.363 9.719-9.725 9.719zm5.325-7.288c-.29-.145-1.716-.847-1.982-.944-.266-.096-.46-.145-.653.146-.193.29-.75.944-.92 1.138-.169.193-.338.217-.628.072-.29-.145-1.223-.451-2.33-1.437-.861-.768-1.443-1.716-1.612-2.006-.169-.29-.018-.447.127-.591.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.096-.193.048-.362-.024-.507-.072-.145-.653-1.575-.896-2.158-.236-.567-.477-.49-.653-.499l-.556-.01c-.193 0-.507.072-.773.362-.266.29-1.016.993-1.016 2.423s1.04 2.81 1.185 3.005c.145.193 2.048 3.13 4.964 4.389.694.3 1.235.478 1.657.612.696.221 1.33.19 1.83.115.558-.083 1.716-.702 1.958-1.38.242-.678.242-1.259.169-1.38-.072-.121-.266-.193-.556-.338z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/espetinhoarena_barreirinho" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="font-size:1.1rem">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.2" cy="6.8" r="1"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING -->
+
+  <a class="floating-whatsapp" href="https://wa.me/5531992685050" target="_blank" rel="noopener noreferrer" aria-label="Pedir pelo WhatsApp">
+    <svg class="icon" viewBox="0 0 32 32" fill="currentColor" style="font-size:1.6rem">
+      <path d="M16.004 3C9.377 3 4 8.377 4 15.004c0 2.65.86 5.1 2.317 7.086L4.8 28.2l6.3-1.653a11.94 11.94 0 004.904 1.05h.005c6.627 0 12.004-5.377 12.004-12.004S22.631 3 16.004 3zm0 21.723a9.7 9.7 0 01-4.945-1.354l-.355-.21-3.74.98.999-3.646-.23-.374a9.693 9.693 0 01-1.487-5.115c0-5.362 4.363-9.725 9.758-9.725 5.362 0 9.725 4.363 9.725 9.725 0 5.395-4.363 9.719-9.725 9.719zm5.325-7.288c-.29-.145-1.716-.847-1.982-.944-.266-.096-.46-.145-.653.146-.193.29-.75.944-.92 1.138-.169.193-.338.217-.628.072-.29-.145-1.223-.451-2.33-1.437-.861-.768-1.443-1.716-1.612-2.006-.169-.29-.018-.447.127-.591.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.096-.193.048-.362-.024-.507-.072-.145-.653-1.575-.896-2.158-.236-.567-.477-.49-.653-.499l-.556-.01c-.193 0-.507.072-.773.362-.266.29-1.016.993-1.016 2.423s1.04 2.81 1.185 3.005c.145.193 2.048 3.13 4.964 4.389.694.3 1.235.478 1.657.612.696.221 1.33.19 1.83.115.558-.083 1.716-.702 1.958-1.38.242-.678.242-1.259.169-1.38-.072-.121-.266-.193-.556-.338z"/>
+    </svg>
+  </a>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- ══════════════ SCRIPTS ═══════════════ -->
+
+  <script>
+    /* Header scroll */
+    const header = document.getElementById("siteHeader");
+    const backToTop = document.getElementById("backToTop");
+
+    function onScroll() {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+      backToTop.classList.toggle("show", window.scrollY > 500);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    /* Reveal on scroll */
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach((el) => revealObserver.observe(el));
+
+    /* Animated counters */
+    function animateCounters() {
+      const counters = document.querySelectorAll("[data-target]");
+
+      counters.forEach((counter) => {
+        const target = parseInt(counter.getAttribute("data-target"));
+        const duration = 1800;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          // easeOutExpo
+          const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          const current = Math.round(eased * target);
+
+          counter.textContent = current;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    // Trigger counters when hero-stats enters viewport
+    const statsSection = document.querySelector(".hero-stats");
+    let countersDone = false;
+
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !countersDone) {
+            countersDone = true;
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    if (statsSection) statsObserver.observe(statsSection);
+
+    /* Fire particles */
+    const fireContainer = document.getElementById("fireParticles");
+
+    function createFireParticle() {
+      const p = document.createElement("span");
+      p.className = "fire-particle";
+
+      const size = 2 + Math.random() * 5;
+      const duration = 1.2 + Math.random() * 1.8;
+      const delay = Math.random() * 0.5;
+      const startX = 70 + Math.random() * 60; // centered around flame
+      const drift = (Math.random() - 0.5) * 60;
+
+      // Color variation
+      const colors = ["#f1ca70", "#ff8735", "#e85f18", "#ffffff"];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${startX}px`;
+      p.style.background = color;
+      p.style.boxShadow = `0 0 ${size * 2}px ${color}`;
+      p.style.animationDuration = `${duration}s`;
+      p.style.animationDelay = `${delay}s`;
+      p.style.setProperty("--fx", `${drift}px`);
+
+      fireContainer.appendChild(p);
+
+      // Cleanup after animation
+      setTimeout(() => {
+        if (p.parentNode) p.parentNode.removeChild(p);
+      }, (duration + delay) * 1000 + 100);
+    }
+
+    // Continuously spawn fire particles
+    setInterval(createFireParticle, 120);
+
+    /* Background particles */
+    const particlesContainer = document.getElementById("particles");
+    const particleCount = window.innerWidth < 700 ? 16 : 30;
+
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement("span");
+      const size = 2 + Math.random() * 4;
+      const duration = 6 + Math.random() * 8;
+      const delay = Math.random() * 8;
+      const drift = Math.random() * 80 - 40;
+
+      particle.className = "particle";
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.animationDuration = `${duration}s`;
+      particle.style.animationDelay = `${delay}s`;
+      particle.style.setProperty("--drift", `${drift}px`);
+
+      particlesContainer.appendChild(particle);
+    }
+
+    /* ═══════════════════════════════════════════
+       LÓGICA DE HORÁRIO DO BOTÃO
+    ════════════════════════════════════════════ */
+    
+    function checkOpeningHours() {
+      const btn = document.getElementById('status-fire-btn');
+      if (!btn) return;
+
+      const now = new Date();
+      const day = now.getDay(); // 0 = Domingo, 1 = Segunda, ... 6 = Sábado
+      const hour = now.getHours();
+
+      let isOpen = false;
+
+      // Regras:
+      // Terça (2): Fechado
+      // Domingo (0): Aberto 14h às 23h
+      // Outros (1, 3, 4, 5, 6): Aberto 18h às 23h
+
+      if (day === 2) {
+        isOpen = false; // Terça fechado
+      } else if (day === 0) {
+        // Domingo
+        if (hour >= 14 && hour < 23) isOpen = true;
+      } else {
+        // Seg, Qua, Qui, Sex, Sab
+        if (hour >= 18 && hour < 23) isOpen = true;
+      }
+
+      // Atualiza o visual do botão
+      if (isOpen) {
+        btn.textContent = "ABERTO";
+        btn.className = "status-fire-btn is-open";
+      } else {
+        btn.textContent = "FECHADO";
+        btn.className = "status-fire-btn is-closed";
+      }
+    }
+
+    // Executa ao carregar e a cada minuto para garantir sincronia
+    checkOpeningHours();
+    setInterval(checkOpeningHours, 60000);
+
+  </script>
+
+</body>
+</html>
