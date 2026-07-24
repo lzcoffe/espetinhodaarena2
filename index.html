@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Espetinho Arena — espeteria artesanal em Barreirinho. Espetinhos na brasa, pastéis, cachorro-quente, cerveja gelada e caldo de cana. Peça pelo WhatsApp."
+    content="Espetinho da Arena — espeteria artesanal em Barreirinho. Espetinhos na brasa, pastéis, cachorro-quente, cerveja gelada e caldo de cana. Peça pelo WhatsApp."
   >
 
   <meta name="theme-color" content="#0b0806">
@@ -27,6 +27,7 @@
     rel="stylesheet"
   >
 
+  <!-- Favicon antigo mantido, mas você pode trocar pelo logo também -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b0806'/%3E%3Cpath fill='%23e85f18' d='M15.36 5.21a8.25 8.25 0 01-3.32 15.79A8.25 8.25 0 016.04 7.05 8.29 8.29 0 009 9.6a9 9 0 013.36-6.87 8.2 8.2 0 003 2.48z'/%3E%3C/svg%3E">
 
   <script type="application/ld+json">
@@ -205,6 +206,19 @@
 
     .brand { display: flex; align-items: center; gap: 11px; white-space: nowrap; }
 
+    /* Ajuste para o novo logo */
+    .brand-logo {
+      height: 50px; /* Altura fixa para alinhar no header */
+      width: auto;  /* Largura automática para manter proporção */
+      display: block;
+      transition: transform .3s var(--ease);
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    }
+    .brand:hover .brand-logo { 
+      transform: scale(1.05); 
+    }
+
+    /* Mantive o estilo antigo caso queira voltar, mas oculto por padrão se usar a imagem */
     .brand-mark {
       width: 40px; height: 40px;
       display: grid; place-items: center;
@@ -262,7 +276,7 @@
 
     /* ════════════════════════════════════════════
        BUTTONS
-    ════════════════════════════════════════════ */
+    ═══════════════════════════════════════════ */
 
     .button {
       position: relative; overflow: hidden;
@@ -306,7 +320,7 @@
 
     /* ════════════════════════════════════════════
        HERO — redesenhado
-    ════════════════════════════════════════════ */
+    ═══════════════════════════════════════════ */
 
     .hero {
       position: relative; z-index: 1;
@@ -379,7 +393,7 @@
     .hero-meta .icon { color: var(--gold); font-size: 1rem; }
     .hero-meta strong { color: var(--gold-light); }
 
-    /* ═══ HERO VISUAL — novo design: Chama SVG + Stats ═══ */
+    /* ══ HERO VISUAL — novo design: Chama SVG + Stats ═══ */
 
     .hero-showcase {
       position: relative;
@@ -494,6 +508,64 @@
     }
 
     /* ════════════════════════════════════════════
+       BOTÃO DE STATUS DO FOGO (AJUSTADO PARA A PONTA)
+    ════════════════════════════════════════════ */
+    
+    .status-fire-btn {
+      position: absolute;
+      top: 0; /* Alinha com o topo do container da chama */
+      left: 50%;
+      /* Ajuste fino: centraliza horizontalmente e sobe um pouco para ficar acima da ponta */
+      transform: translate(-50%, -80%); 
+      z-index: 10;
+      padding: 8px 18px;
+      border-radius: 50px; /* Arredondado estilo pílula */
+      font-family: "Oswald", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: default;
+      pointer-events: none;
+      
+      /* Estilo base escuro e elegante */
+      background: rgba(11, 8, 6, 0.85); 
+      color: var(--cream);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Estado Aberto - Visual "LIGADO" */
+    .status-fire-btn.is-open {
+      background: linear-gradient(135deg, #25d366, #128c7e); /* Verde Vibrante */
+      color: #fff;
+      border-color: #fff;
+      /* Brilho intenso verde para parecer ligado */
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3);
+      transform: translate(-50%, -90%) scale(1.1);
+      /* Animação de pulso suave */
+      animation: btnPulse 2s infinite;
+    }
+
+    @keyframes btnPulse {
+      0% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.9), 0 0 60px rgba(37, 211, 102, 0.5); }
+      100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3); }
+    }
+
+    /* Estado Fechado */
+    .status-fire-btn.is-closed {
+      background: linear-gradient(135deg, #1a1a1a, #000); /* Preto/Cinza */
+      color: #ae9981; /* Cor Muted */
+      border-color: rgba(255,255,255,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      animation: none;
+    }
+
+    /* ═══════════════════════════════════════════
        HIGHLIGHTS
     ════════════════════════════════════════════ */
 
@@ -590,7 +662,7 @@
 
     /* ════════════════════════════════════════════
        STEPS
-    ════════════════════════════════════════════ */
+    ═══════════════════════════════════════════ */
 
     .steps {
       position: relative; z-index: 1;
@@ -627,7 +699,7 @@
 
     /* ════════════════════════════════════════════
        MENU
-    ════════════════════════════════════════════ */
+    ═══════════════════════════════════════════ */
 
     .menu-section {
       position: relative; z-index: 1;
@@ -725,7 +797,7 @@
     .size-row:last-child { border-bottom: 0; }
     .size-row strong { color: var(--gold-light); font-weight: 500; }
 
-    /* ════════════════════════════════════════════
+    /* ═══════════════════════════════════════════
        LOCATION
     ════════════════════════════════════════════ */
 
@@ -785,7 +857,7 @@
     }
     .opening strong { color: var(--gold-light); }
 
-    /* ════════════════════════════════════════════
+    /* ══════════════════════════════════════════
        FOOTER
     ════════════════════════════════════════════ */
 
@@ -862,7 +934,7 @@
     .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
     .back-to-top:hover { border-color: var(--gold); background: var(--gold); color: var(--black); }
 
-    /* ════════════════════════════════════════════
+    /* ═══════════════════════════════════════════
        RESPONSIVE
     ════════════════════════════════════════════ */
 
@@ -937,13 +1009,12 @@
     <nav class="navbar container">
 
       <a class="brand" href="#inicio">
-        <span class="brand-mark">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="font-size:1.3rem">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
-          </svg>
-        </span>
+        <!-- NOVO LOGO AQUI -->
+<img src="https://i.ibb.co/1YGd9dMg/logo-png.jpg" alt="Espetinho Arena Logo" class="brand-logo">
+        
+        <!-- Texto opcional ao lado do logo (pode remover se quiser só a imagem) -->
         <span class="brand-text">
-          <strong>Espetinho Arena</strong>
+          <strong>Espetinho da Arena</strong>
           <small>Espeteria & Brasa</small>
         </span>
       </a>
@@ -1015,6 +1086,7 @@
           <div class="fire-particles" id="fireParticles"></div>
 
           <div class="flame-container">
+            <!-- SVG da Chama -->
             <svg class="flame-svg" viewBox="0 0 120 150" fill="none">
               <!-- Outer flame -->
               <path class="flame-outer" d="M60 5 C30 50, 5 85, 10 115 C15 140, 40 150, 60 150 C80 150, 105 140, 110 115 C115 85, 90 50, 60 5Z"/>
@@ -1025,6 +1097,12 @@
               <!-- Core glow -->
               <path class="flame-core" d="M60 85 C54 95, 46 108, 48 122 C49 130, 54 136, 60 136 C66 136, 71 130, 72 122 C74 108, 66 95, 60 85Z"/>
             </svg>
+            
+            <!-- BOTÃO DE STATUS SOBRE A PONTA DO FOGO -->
+            <div id="status-fire-btn" class="status-fire-btn">
+              Carregando...
+            </div>
+
           </div>
 
           <div class="showcase-label">
@@ -1033,11 +1111,11 @@
 
           <div class="hero-stats">
             <div class="stat-card">
-              <span class="stat-number" data-target="11">0</span>
+              <span class="stat-number" data-target="12">0</span>
               <span class="stat-label">Tipos de espeto</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-number" data-target="6">0</span>
               <span class="stat-label">Dias por semana</span>
             </div>
             <div class="stat-card">
@@ -1192,7 +1270,8 @@
 
         <div class="menu-grid">
 
-          <article class="menu-card menu-card-wide menu-card-featured reveal">
+                <article class="menu-card menu-card-wide menu-card-featured reveal">
+  <          <article class="menu-card menu-card-wide menu-card-featured reveal">
             <div class="card-ribbon">Mais pedido</div>
             <div class="menu-card-header">
               <h3>Espetinhos</h3>
@@ -1200,20 +1279,14 @@
             </div>
             <ul class="menu-list grid">
               <li>Boi</li><li>Medalhão</li><li>Porco</li><li>Almôndega</li>
-              <li>Coração</li><li>Tulipa</li><li>Romeu e Julieta</li><li>Brochete</li>
+              <li>Coração</li><li>Tulipa</li>
+              <li>Romeu e Julieta <span class="item-price">R$ 14,00</span></li>
+              <li>Brochete</li>
+              <li>Queijo Coalho <span class="item-price">R$ 15,00</span></li>
               <li>Linguiça aperitiva</li><li>Linguiça caseira</li><li>Misto</li>
             </ul>
           </article>
-
-          <article class="menu-card reveal reveal-delay-1">
-            <div class="menu-card-header">
-              <h3>Pastel</h3>
-              <div class="price">R$ 4<small>,00</small></div>
-            </div>
-            <ul class="menu-list">
-              <li>Carne</li><li>Queijo</li><li>Pizza</li><li>Frango com catupiry</li>
-            </ul>
-          </article>
+</article>
 
           <article class="menu-card reveal reveal-delay-2">
             <div class="menu-card-header">
@@ -1409,7 +1482,7 @@
     </svg>
   </button>
 
-  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <!-- ══════════════ SCRIPTS ═══════════════ -->
 
   <script>
     /* Header scroll */
@@ -1548,6 +1621,50 @@
 
       particlesContainer.appendChild(particle);
     }
+
+    /* ═══════════════════════════════════════════
+       LÓGICA DE HORÁRIO DO BOTÃO
+    ════════════════════════════════════════════ */
+    
+    function checkOpeningHours() {
+      const btn = document.getElementById('status-fire-btn');
+      if (!btn) return;
+
+      const now = new Date();
+      const day = now.getDay(); // 0 = Domingo, 1 = Segunda, ... 6 = Sábado
+      const hour = now.getHours();
+
+      let isOpen = false;
+
+      // Regras:
+      // Terça (2): Fechado
+      // Domingo (0): Aberto 14h às 23h
+      // Outros (1, 3, 4, 5, 6): Aberto 18h às 23h
+
+      if (day === 2) {
+        isOpen = false; // Terça fechado
+      } else if (day === 0) {
+        // Domingo
+        if (hour >= 14 && hour < 23) isOpen = true;
+      } else {
+        // Seg, Qua, Qui, Sex, Sab
+        if (hour >= 18 && hour < 23) isOpen = true;
+      }
+
+      // Atualiza o visual do botão
+      if (isOpen) {
+        btn.textContent = "ABERTO";
+        btn.className = "status-fire-btn is-open";
+      } else {
+        btn.textContent = "FECHADO";
+        btn.className = "status-fire-btn is-closed";
+      }
+    }
+
+    // Executa ao carregar e a cada minuto para garantir sincronia
+    checkOpeningHours();
+    setInterval(checkOpeningHours, 60000);
+
   </script>
 
 </body>
