@@ -1067,7 +1067,7 @@
           <div class="hero-meta">
             <span>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
-              <strong>Qui a Dom</strong> · 18h às 23h
+              <strong>seg a Dom</strong> · 18h às 23h
             </span>
             <span>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
@@ -1422,7 +1422,7 @@
         <div class="section-title reveal">
           <div class="eyebrow">Faça seu pedido</div>
           <h2>Hoje combina com <span>espeto.</span></h2>
-          <p>Chame a Arena pelo WhatsApp e peça seus favoritos direto da brasa. Atendimento de quinta a domingo, das 18h às 23h.</p>
+          <p>Chame a Arena pelo WhatsApp e peça seus favoritos direto da brasa. Atendimento de segunda a domingo, das 18h às 23h.</p>
         </div>
 
         <div class="contact-actions reveal reveal-delay-1">
